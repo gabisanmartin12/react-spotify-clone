@@ -28,6 +28,10 @@ export default {
         "whiter-shade-of-pale": "#A7C2D1",
         "yellow-submarine": "#F4E357",
       }),
+      fontFamily: {
+        heading: "CircularSpotifyText",
+        text: "SfProText",
+      },
     },
   },
   plugins: [],

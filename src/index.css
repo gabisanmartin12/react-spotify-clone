@@ -2,9 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    html {
-        @apply text-white;
-    }
-        
+@layer base {
+  @font-face {
+    font-family: CircularSpotifyText;
+    font-style: normal;
+    font-weight: bold;
+    src: url("./assets/fonts/circular-spotify-text-bold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: SfProText;
+    font-style: normal;
+    font-weight: normal;
+    src: url("./assets/fonts/sf-pro-text-regular.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: SfProText;
+    font-style: normal;
+    font-weight: bold;
+    src: url("./assets/fonts/sf-pro-text-bold.otf") format("opentype");
+  }
+
+  html {
+    @apply text-white;
+  }
 }
