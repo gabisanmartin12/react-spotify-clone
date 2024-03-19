@@ -20,20 +20,20 @@ export const TextVariant = [
 type TextVariantType = (typeof TextVariant)[number];
 
 const STYLES_BY_VARIANT: Record<TextVariantType, string> = {
-  body1: "text-lg/6",
-  body2: "text-base/5",
-  body3: "text-sm",
-  heading1: "text-5xl/[3.25rem]",
-  heading2: "text-[2.5rem]/[2.75rem]",
-  heading3: "text-[2rem]/9",
-  heading4: "text-[1.75rem]/8",
-  heading5: "text-2xl/7",
-  heading6: "text-xl/6",
-  lead: "text-xl/6",
-  small: "text-xs",
-  subtitle: "text-xs",
-  title1: "text-base/5",
-  title2: "text-sm",
+  body1: "font-text text-lg/6",
+  body2: "font-text text-base/5",
+  body3: "font-text text-sm",
+  heading1: "font-heading text-5xl/[3.25rem]",
+  heading2: "font-heading text-[2.5rem]/[2.75rem]",
+  heading3: "font-heading text-[2rem]/9",
+  heading4: "font-heading text-[1.75rem]/8",
+  heading5: "font-heading text-2xl/7",
+  heading6: "font-heading text-xl/6",
+  lead: "font-text text-xl/6",
+  small: "font-text text-xs",
+  subtitle: "font-text text-xs",
+  title1: "font-text text-base/5",
+  title2: "font-text text-sm",
 };
 
 export type TextProps = HTMLAttributes<HTMLParagraphElement> & {
