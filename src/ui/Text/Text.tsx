@@ -1,4 +1,5 @@
 import { HTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 
 export const TextVariant = [
   "body1",
@@ -37,9 +38,12 @@ const STYLES_BY_VARIANT: Record<TextVariantType, string> = {
 };
 
 export type TextProps = HTMLAttributes<HTMLParagraphElement> & {
+  /** This is a description */
   variant: TextVariantType;
 };
 
-export const Text = ({ variant, ...props }: TextProps) => {
-  return <p className={STYLES_BY_VARIANT[variant]} {...props} />;
+export const Text = ({ className, variant, ...props }: TextProps) => {
+  return (
+    <p className={twMerge(STYLES_BY_VARIANT[variant], className)} {...props} />
+  );
 };
