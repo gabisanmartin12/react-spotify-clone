@@ -11,6 +11,9 @@ const meta: Meta<typeof Text> = {
   },
   component: Text,
   parameters: {
+    controls: {
+      exclude: ["as"],
+    },
     docs: {
       docsMode: true,
       page: () => (

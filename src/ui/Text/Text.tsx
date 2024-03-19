@@ -1,4 +1,4 @@
-import { HTMLAttributes } from "react";
+import { ComponentPropsWithoutRef, ElementType } from "react";
 import { twMerge } from "tailwind-merge";
 
 export const TextVariant = [
@@ -37,13 +37,22 @@ const STYLES_BY_VARIANT: Record<TextVariantType, string> = {
   title2: "font-text font-bold text-sm -tracking-[.01em]",
 };
 
-export type TextProps = HTMLAttributes<HTMLParagraphElement> & {
-  /** This is a description */
+export type TextProps<T extends ElementType> = ComponentPropsWithoutRef<T> & {
+  as?: T;
   variant: TextVariantType;
 };
 
-export const Text = ({ className, variant, ...props }: TextProps) => {
+export const Text = <T extends ElementType>({
+  as,
+  className,
+  variant,
+  ...props
+}: TextProps<T>) => {
+  const Component = as || "p";
   return (
-    <p className={twMerge(STYLES_BY_VARIANT[variant], className)} {...props} />
+    <Component
+      className={twMerge(STYLES_BY_VARIANT[variant], className)}
+      {...props}
+    />
   );
 };
