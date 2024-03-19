@@ -23,8 +23,4 @@
     font-weight: bold;
     src: url("./assets/fonts/sf-pro-text-bold.otf") format("opentype");
   }
-
-  html {
-    @apply text-white;
-  }
 }
